@@ -1,0 +1,38 @@
+body{
+    background-color: #778DA9;  
+}
+.header{
+    text-align: left;
+    background-color: #0D1B2A;
+    padding: 20px 20px 10px 20px;
+}
+.websiteName{
+    color: #E0E1DD;
+    /*width: 100px;*/
+}
+
+.uk-container-small{
+    background-color: #E0E1DD; 
+    height:75%;
+}
+#lblSearch{
+    padding-top: 20px;
+}
+
+.footer{
+    background-color: #0D1B2A;
+    padding: 10px 10px 5px 10px;
+}
+
+#footerCopyright{
+    color: #778DA9;
+}
+
+/*
+Colour scheme
+#0D1B2A
+#1B263B
+#415A77
+#778DA9
+#E0E1DD
+*/
