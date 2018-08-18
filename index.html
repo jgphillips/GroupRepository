@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title> Hello World</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Code Cinema Search Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
 </head>
 <body>
-    <h1>Alex Test </h1>
+    <div class="header">
+            <header>
+                <h2 class="websiteName">Code Cinema</h2>    
+            </header>
+    </div>
+    <div class="uk-container uk-container-small">
+        <div class="row" id="searchRow">
+            <label class="uk-panel uk-text-lead" id="lblSearch">Enter the name of the movie you are looking for:</label>
+            <div class="uk-margin">
+                    <form class="uk-search uk-search-large">
+                            <a href="" uk-search-icon></a>
+                        <input class="uk-search-input" type="search" placeholder="Search...">
+                    </form>
+            </div>
+        </div>
+        <div class="row" id="searchResults">    
+
+        </div>
+    </div>
+    <div class="footer">
+            <footer>
+                <p class="uk-text-center" id="footerCopyright">copyright &#169; Code Cinema</p>    
+            </footer>
+    </div>
+
 </body>
 </html>
