@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Hello World</title>
+    <title>Buenos Nachos</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Code Cinema Search Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
 </head>
 <body>
+        
+        <div class="header">
+            <header>
+                <h2 class="websiteName">Code Cinema</h2>    
+            </header>
+        </div>
+        
+          
+        <!--   Basic OMDB Search Template
+          
+          <div id="buttons-view"></div>
+        
+            <form id="movie-form">
+              <label for="movie-input">Search</label>
+              <input type="text" id="movie-input">
+              <br>
+        
+              
+              <input id="add-movie" type="submit" value="Search">
+            </form>
+        
+                
+                <div id="movies-view"></div>
+          -->
+          
+   
     
+
+    <div class="uk-container uk-container-small">
+        <div class="row" id="searchRow">
+            <label class="uk-panel uk-text-lead" id="lblSearch">Enter the name of the movie you are looking for:</label>
+            <div class="uk-margin">
+                <div id="buttons-view"></div>
+                    <form id="movie-view" class="uk-search uk-search-large">
+                        <label for="movie-input">Search</label>
+                        <input type="text" id="movie-input" class="uk-search-input"  placeholder="Search...">
+                        <br>
+                        <input id="add-movie" type="submit" value="Search">
+            </form>
+                   
+            </div>
+        </div>
+        <div id="movies-view">
+          <img id="posterBorder">
+
+        </img>
+        </div>
+
+        </div>
+      
+      </div>
+
+      <div class="footer">
+              <footer>
+                  <p class="uk-text-center" id="footerCopyright">copyright &#169; Code Cinema</p>    
+              </footer>
+      </div>
+   
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+         
 </body>
 </html>
