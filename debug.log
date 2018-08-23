@@ -1,2 +1,10 @@
 [0814/191642:ERROR:tcp_listen_socket.cc(76)] Could not bind socket to 127.0.0.1:6004
 [0814/191642:ERROR:node_debugger.cc(86)] Cannot start debugger server
+[0818/105616.887:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0818/113352.283:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0818/131647.010:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0819/222152.743:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0819/222152.836:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0819/222152.937:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0819/223147.700:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0821/191803.494:ERROR:crash_report_database_win.cc(428)] unexpected header
