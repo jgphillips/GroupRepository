@@ -25,7 +25,7 @@ body{
 }
 
 #footerCopyright{
-    color: #778DA9;
+    color: white;
 }
 
 /*
@@ -36,3 +36,12 @@ Colour scheme
 #778DA9
 #E0E1DD
 */
+
+/* Make the SVG fill the screen */
+svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
