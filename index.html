@@ -1,33 +1,63 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <title>Buenos Nachos</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Code Cinema Search Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link rel="stylesheet" href="./css/style.css">
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+    
+    
 </head>
 <body>
-    <div class="header">
+        
+        <div class="header">
             <header>
                 <h2 class="websiteName">Code Cinema</h2>    
             </header>
-    </div>
+        </div>
+        
+          
+        <!--   Basic OMDB Search Template
+          
+          <div id="buttons-view"></div>
+        
+            <form id="movie-form">
+              <label for="movie-input">Search</label>
+              <input type="text" id="movie-input">
+              <br>
+        
+              
+              <input id="add-movie" type="submit" value="Search">
+            </form>
+        
+                
+                <div id="movies-view"></div>
+          -->
+          
+   
+    
+
     <div class="uk-container uk-container-small">
         <div class="row" id="searchRow">
             <label class="uk-panel uk-text-lead" id="lblSearch">Enter the name of the movie you are looking for:</label>
             <div class="uk-margin">
-                    <form class="uk-search uk-search-large">
-                            <a href="" uk-search-icon></a>
-                        <input class="uk-search-input" type="search" placeholder="Search...">
-                    </form>
+                <div id="buttons-view"></div>
+                    <form id="movie-view" class="uk-search uk-search-large">
+                        <label for="movie-input">Search</label>
+                        <input type="text" id="movie-input" class="uk-search-input"  placeholder="Search...">
+                        <br>
+                        <input id="add-movie" type="submit" value="Search">
+            </form>
+                   
             </div>
         </div>
-        <div class="row" id="searchResults">    
+        <div id="movies-view">
+          <img id="posterBorder">
 
+        </img>
         </div>
 
         <div id="buttons-view"></div>
@@ -62,96 +92,10 @@
       </svg>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
- <script type="text/javascript">
-  var curtain = document.getElementById("curtain");
+<script type="text/javascript" src="js/app.js"></script> 
+<script src="js/uikit.min.js"></script>
+<script src="js/uikit-icons.min.js"></script>
 
-  curtain.addEventListener("click", function(evt) {
-    // Call beginElement() on the <animate> element to start the animation running
-    document.getElementById("curtainAnimate").beginElement();
-  });
 
-  var movies = [];
-
-    function displayMovieInfo() {
-      var movie = $(this).attr("data-name");
-      var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-
-      // ajax call
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function(response) {
-        if (response.Error) {
-          alert("Error: " + response.Error);
-          return
-        }
-
-        var movieDiv = $("<div class='movie'>");
-
-        // Rating
-        var rating = response.Rated;
-        var pOne = $("<p>").text("Rating: " + rating);
-        movieDiv.append(pOne);
-
-        // Release Date
-        var released = response.Released;
-        var pTwo = $("<p>").text("Released: " + released);
-        movieDiv.append(pTwo);
-
-        // Plot
-        var plot = response.Plot;
-        var pThree = $("<p>").text("plot: " + plot);
-        movieDiv.append(pThree);
-
-        // Country
-        var country = response.Country;
-        var pFour = $("<p>").text("Country: " + country);
-        movieDiv.append(pFour);
-
-        // Title
-        var title = response.Title;
-        var pFive = $("<p>").text("Title: " + title);
-        movieDiv.append(pFive);
-        
-          // Poster
-        var imgURL = response.Poster;
-        var image = $("<img>").attr("src", imgURL);
-        movieDiv.append(image);
-
-        // Movie info presentation
-        $("#movies-view").html(movieDiv);
-      }).catch(function(error) {
-        console.log(error);
-      });
-
-    }
-
-    // I probably should get rid of these button? I am having trouble going directly through the search box
-    function renderButtons() {
-      $("#buttons-view").empty();
-
-      for (var i = 0; i < movies.length; i++) {
-        var a = $("<button>");
-        a.addClass("movie-btn");
-        a.attr("data-name", movies[i]);
-        a.text(movies[i]);
-        $("#buttons-view").append(a);
-      }
-    }
-    
-    
-    $("#add-movie").on("click", function(event) {
-      event.preventDefault();
-      var movie = $("#movie-input").val().trim();
-      movies.push(movie);
-      renderButtons();
-    });
-
-    $(document).on("click", ".movie-btn", displayMovieInfo);
-
-    renderButtons();
-    
-  </script>
 </body>
 </html>
