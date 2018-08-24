@@ -2,74 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Buenos Nachos</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Code Cinema Search Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="./css/style.css">
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>    
+    <style>
+          #map {
+          width: 100%;
+          height: 400px;
+          background-color: grey;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.10/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+
+
 </head>
+
 <body>
-        
-        <div class="header">
-            <header>
-                <h2 class="websiteName">Code Cinema</h2>    
-            </header>
-        </div>
-        
-          <h3>My Google Maps and OmDb API</h3>
+
+    <header>
+            <div class="header">      
+                    <h2 class="websiteName">Code Cinema</h2>             
+            </div>
+    </header>
+
+    <main>
+
+            <h3>My Google Maps and OmDb API</h3>
 
 
-          <!-- OMDB API HTML -->
-  
-                  <div id="searchRow">
-                      <label id="lblSearch">Enter the name of the movie you are looking for:</label>
-                      <div>
-                              <form id="movie-view">
-                                  <label for="movie-input">Search</label>
-                                  <input type="text" id="movie-input">                                
-                                  <input id="add-movie" type="submit" value="Search">
-                              </form>  
-                      </div>
-                  </div>
-  
-                  <div id="ErrorImageText"></div>
-                  <img id="ErrorImage">
-                  <div id="movies-view">
-                      <img id="posterBorder">
-                  </div>   
-  
-          <!-- GOOGLE MAPS API HTML-->                
-          <div id="mapNotFoundText"></div>    
-          <img id="mapNotFound">
-          <div id="map"></div>
-  
-  
-          
-    <!--
-    <svg id="curtain" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path fill="#333" d="M 100,0 L 0,0 L 0,130 c 0,-17, 23,-30, 50,-30 c 27,0, 50,13, 50,30 Z">
-          <animate id="curtainAnimate" attributeName="d"
-                  begin="indefinite" dur="2s" fill="freeze"
-                  keyTimes="0; 0.7; 1"
-                  values="M 100,0 L 0,0 L 0,130 c 0,-17, 23,-30, 50,-30 c 27,0, 50,13, 50,30 Z;
-                          M 100,0 L 0,0 L 0,50  c 0,-17, 23,-30, 50,-30 c 27,0, 50,13, 50,30 Z;
-                          M 100,0 L 0,0 L 0,0   c 0,0, 50,0, 50,0       c 0,0, 50,0, 50,0 Z"/>
-        </path>
-        <!-- Hides the SVG when the path animation ends 
-        <set begin="curtainAnimate.end" attributeType="CSS" attributeName="display" to="none"/>
-    </svg> -->
+            <!-- OMDB API HTML -->    
+                    <div id="searchRow">
+                        <label id="lblSearch">Enter the name of the movie you are looking for:</label>
+                        <div>
+                                <form id="movie-view">
+                                    <label for="movie-input">Search</label>
+                                    <input type="text" id="movie-input">                                
+                                    <input id="add-movie" type="submit" value="Search">
+                                </form>  
+                        </div>
+                    </div>
     
+                    <div id="ErrorImageText"></div>
+                    <img id="ErrorImage"></img>
+                    <div id="movies-view">
+                        <img id="posterBorder"></img>
+                    </div>   
+    
+            <!-- GOOGLE MAPS API HTML-->                
+            <div id="mapNotFoundText"></div>    
+            <img id="mapNotFound"></img>
+            <div id="map"></div>
+    
+    
+            
+              
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/uikit.min.js"></script>
-<script src="js/uikit-icons.min.js"></script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxZSaGlJAvDivvZZSShzU0Z_T66I_8vpQ&callback=initMap">
-</script>
-<script type="text/javascript" src="js/app.js"></script>
+    </main>
 
+    <footer>
+            <div class="card-footer ">
+                    <p> <strong> Copyright © 2018 by Geo-Cinema </strong>  </p>
+            </div>
+    </footer>
+
+    <script type="text/javascript" src="app.js"></script> 
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxZSaGlJAvDivvZZSShzU0Z_T66I_8vpQ&callback=initMap">
+    </script>       
 </body>
 </html>
