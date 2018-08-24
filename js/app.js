@@ -181,7 +181,3 @@
             event.preventDefault();
             saveToFireBase();
           });
-      
-      
-      
-
